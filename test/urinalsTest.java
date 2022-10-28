@@ -10,5 +10,6 @@ public class urinalsTest {
     @Test
     public void testGoodString() {
         Assertions.assertTrue(src.goodString("001"));
+        Assertions.assertFalse(src.goodString("abc"));
     }
 }
