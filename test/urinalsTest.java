@@ -36,13 +36,13 @@ public class urinalsTest {
         Assertions.assertEquals("0", out);
 
         List<Integer> list2 = new ArrayList<>();
-        list.add(0);
-        list.add(0);
-        list.add(0);
-        list.add(0);
-        list.add(0);
-        list.add(0);
-        String out2 = src.countUrinals(list);
+        list2.add(0);
+        list2.add(0);
+        list2.add(0);
+        list2.add(0);
+        list2.add(0);
+        list2.add(0);
+        String out2 = src.countUrinals(list2);
         Assertions.assertEquals("3", out2);
     }
 }
