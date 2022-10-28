@@ -1,5 +1,7 @@
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -9,6 +11,7 @@ import java.util.regex.Pattern;
 
 public class Source {
     private String isValid = "false";
+    private final String ruleTxt = "src\\main\\resources\\rule.txt";
 
     public void run() {
         try {
@@ -24,9 +27,17 @@ public class Source {
                 }
             }
 
+            File file = new File(ruleTxt);
+            BufferedWriter output = new BufferedWriter(new FileWriter(file));
+
             for (String s : temp) {
                 System.out.println(s);
+                output.write(s);
+                output.newLine();
             }
+
+            output.close();
+
         } catch (Exception e) {
             e.printStackTrace();
         }
