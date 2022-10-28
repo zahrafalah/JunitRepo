@@ -18,18 +18,21 @@ public class Source {
             for (String str : data) {
                 if (isValid.equalsIgnoreCase(str)) {
                     temp.add(str);
-                    System.out.println(str);
                 } else {
-                    List<Integer> inputs = integerToString(str);
+                    List<Integer> inputs = stringToIntegerList(str);
                     temp.add(countUrinals(inputs));
                 }
+            }
+
+            for (String s : temp) {
+                System.out.println(s);
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public List<Integer> integerToString(String input) {
+    public List<Integer> stringToIntegerList(String input) {
         String[] split = input.split("");
         List<Integer> integerList = new ArrayList<>();
         for (int i = 0; i < split.length; i++) {
@@ -61,7 +64,7 @@ public class Source {
         }
         if (prev == 0 && next == 0)
             count++;
-        System.out.println(count);
+
         return String.valueOf(count);
     }
 
