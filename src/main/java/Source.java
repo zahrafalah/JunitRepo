@@ -8,10 +8,9 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Source {
+    private String isValid = "false";
 
-    static String isValid = "false";
-
-    public static void run() {
+    public void run() {
         try {
             List<String> data = readFile("src\\main\\resources\\urinal.dat");
             List<String> temp = new ArrayList<>();
@@ -30,7 +29,7 @@ public class Source {
         }
     }
 
-    public static List<Integer> integerToString(String input) {
+    public List<Integer> integerToString(String input) {
         String[] split = input.split("");
         List<Integer> integerList = new ArrayList<>();
         for (int i = 0; i < split.length; i++) {
@@ -39,7 +38,7 @@ public class Source {
         return integerList;
     }
 
-    public static String countUrinals(List<Integer> inputs) {
+    public String countUrinals(List<Integer> inputs) {
         int count = 0;
         Integer prev = null;
         Integer curr = null;
@@ -66,7 +65,7 @@ public class Source {
         return String.valueOf(count);
     }
 
-    public static List<String> readFile(String filename) throws FileNotFoundException {
+    public List<String> readFile(String filename) throws FileNotFoundException {
         List<String> data = new ArrayList<>();
 
         File file = new File(filename);
@@ -84,20 +83,12 @@ public class Source {
         return data;
     }
 
-    public static boolean goodString(String input) {
+    public boolean goodString(String input) {
         Pattern p = Pattern.compile("[01]+");
         Matcher m = p.matcher(input);
         boolean isValid = m.matches();
         return isValid;
-//        if (b == false) {
-//            return isValid;
-//        }
-//        return input;
     }
-//    public static Boolean goodString(String str) { // checks to see if the string is valid
-//        System.out.println("Not yet implemented!");
-//        return true;
-//    }
 
     public String getString() {
         System.out.println("Not yet implemented!");
