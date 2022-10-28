@@ -8,7 +8,7 @@ public class urinalsTest {
     static Source  src = new Source();
 
     @Test
-    public void ifGoodString() {
-
+    public void testGoodString() {
+        Assertions.assertTrue(src.goodString("001"));
     }
 }
