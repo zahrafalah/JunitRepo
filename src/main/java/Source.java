@@ -92,18 +92,4 @@ public class Source {
         boolean isValid = m.matches();
         return isValid;
     }
-
-    public String getString() {
-        System.out.println("Not yet implemented!");
-        return null;
-    }
-
-    public void openFile() {
-        System.out.println("Not yet implemented!");
-
-    }
-//    public int countUrinals(){
-//        System.out.println("Not yet implemented!");
-//        return 0;
-//    }
 }

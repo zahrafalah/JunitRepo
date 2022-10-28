@@ -27,7 +27,7 @@ public class urinalsTest {
 
     @Test
     public void testStringToIntegerList() {
-       List<Integer> list =  src.stringToIntegerList("1001");
+        List<Integer> list = src.stringToIntegerList("1001");
         Assertions.assertEquals(4, list.size());
 
         int item0 = list.get(0);
@@ -63,6 +63,4 @@ public class urinalsTest {
         String out2 = src.countUrinals(list2);
         Assertions.assertEquals("3", out2);
     }
-
-
 }
